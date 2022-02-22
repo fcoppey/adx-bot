@@ -113,7 +113,7 @@ def close_deal(pair, bot_id):
 def get_positions():
     open_positions = {}
     all_positions = ftx.fetchPositions(None, {"showAvgPrice": True})
-    if 'info' in all_positions[0]:
+    if all_positions and 'info' in all_positions[0]:
         for y in all_positions:
             x=y['info']
             future = (x["future"])
@@ -146,9 +146,9 @@ def load_bot_ids(filename):
 
 def get_max_bot_usage(balance):
     if config.MARTINGALE_VOLUME_COEFFICIENT == 1.0:
-        max_bot_usage = (config.BASE_ORDER_VOLUME + (config.SAFETY_ORDER_VOLUME*config.MAX_SAFETY_ORERS)) / config.LEVERAGE_CUSTOM_VALUE
+        max_bot_usage = (config.BASE_ORDER_VOLUME + (config.SAFETY_ORDER_VOLUME * config.MAX_SAFETY_ORDERS)) / config.LEVERAGE_CUSTOM_VALUE
     else:
-        max_bot_usage = (config.BASE_ORDER_VOLUME + (config.SAFETY_ORDER_VOLUME*(config.MARTINGALE_VOLUME_COEFFICIENT**config.MAX_SAFETY_ORERS - 1) / (config.MARTINGALE_VOLUME_COEFFICIENT - 1))) / config.LEVERAGE_CUSTOM_VALUE
+        max_bot_usage = (config.BASE_ORDER_VOLUME + (config.SAFETY_ORDER_VOLUME * (config.MARTINGALE_VOLUME_COEFFICIENT ** config.MAX_SAFETY_ORDERS - 1) / (config.MARTINGALE_VOLUME_COEFFICIENT - 1))) / config.LEVERAGE_CUSTOM_VALUE
     return max_bot_usage
 
 

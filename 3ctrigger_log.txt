@@ -1,0 +1,60 @@
+<<<<>>>>
+Script Run at 2022-02-22 18:30:21 UTC
+Time-frame: 15
+Balance: 1994.80108955, Max Positions: 5
+<<<<>>>>
+Enable bot for LOOKS-PERP at 2022-02-22 18:32:29 UTC
+Enable bot for GRT-PERP at 2022-02-22 18:32:30 UTC
+Enable bot for SLP-PERP at 2022-02-22 18:32:30 UTC
+Enable bot for SKL-PERP at 2022-02-22 18:32:30 UTC
+Enable bot for BADGER-PERP at 2022-02-22 18:32:31 UTC
+Disable bot for SLP-PERP - 8235711 at 2022-02-22 18:46:59 UTC
+Disable bot for SKL-PERP - 8235710 at 2022-02-22 18:46:59 UTC
+Disable bot for LOOKS-PERP - 8235660 at 2022-02-22 18:47:00 UTC
+<<<<>>>>
+Script Run at 2022-02-22 18:48:22 UTC
+Time-frame: 15
+Balance: 1994.37628973, Max Positions: 10
+<<<<>>>>
+Panic Close - SLP-PERP  - 8235711 at 2022-02-22 18:50:05 UTC
+Enable bot for HBAR-PERP at 2022-02-22 18:50:22 UTC
+Enable bot for KIN-PERP at 2022-02-22 18:50:23 UTC
+Enable bot for TRU-PERP at 2022-02-22 18:50:23 UTC
+Enable bot for LUNA-PERP at 2022-02-22 18:50:23 UTC
+Enable bot for MNGO-PERP at 2022-02-22 18:50:24 UTC
+Enable bot for XEM-PERP at 2022-02-22 18:50:24 UTC
+Enable bot for CRO-PERP at 2022-02-22 18:50:25 UTC
+Disable bot for MNGO-PERP - 8235675 at 2022-02-22 19:02:17 UTC
+Disable bot for BADGER-PERP - 8235397 at 2022-02-22 19:02:18 UTC
+Disable bot for XEM-PERP - 8235554 at 2022-02-22 19:16:59 UTC
+Disable bot for TRU-PERP - 8235542 at 2022-02-22 19:16:59 UTC
+Disable bot for KIN-PERP - 8235465 at 2022-02-22 19:17:00 UTC
+Disable bot for CRO-PERP - 8235419 at 2022-02-22 19:17:00 UTC
+Enable bot for ALICE-PERP at 2022-02-22 19:32:23 UTC
+Panic Close - SKL-PERP  - 8235710 at 2022-02-22 19:46:48 UTC
+Disable bot for GRT-PERP - 8235635 at 2022-02-22 19:46:54 UTC
+Enable bot for CLV-PERP at 2022-02-22 19:47:06 UTC
+Disable bot for LUNA-PERP - 8235475 at 2022-02-22 20:02:29 UTC
+Disable bot for HBAR-PERP - 8235453 at 2022-02-22 20:02:30 UTC
+Enable bot for TOMO-PERP at 2022-02-22 20:02:44 UTC
+Panic Close - GRT-PERP  - 8235635 at 2022-02-22 20:16:59 UTC
+Enable bot for GALA-PERP at 2022-02-22 20:17:16 UTC
+Enable bot for MAPS-PERP at 2022-02-22 20:17:17 UTC
+Enable bot for HNT-PERP at 2022-02-22 20:17:17 UTC
+Enable bot for TLM-PERP at 2022-02-22 20:17:19 UTC
+Disable bot for TOMO-PERP - 8235539 at 2022-02-22 20:32:07 UTC
+Disable bot for TLM-PERP - 8235538 at 2022-02-22 20:32:08 UTC
+Disable bot for MAPS-PERP - 8235478 at 2022-02-22 20:47:15 UTC
+Disable bot for HNT-PERP - 8235454 at 2022-02-22 20:47:16 UTC
+Disable bot for GALA-PERP - 8235451 at 2022-02-22 20:47:17 UTC
+Disable bot for ALICE-PERP - 8235385 at 2022-02-22 20:47:17 UTC
+Enable bot for HBAR-PERP at 2022-02-22 20:47:30 UTC
+Disable bot for HBAR-PERP - 8235453 at 2022-02-22 21:01:43 UTC
+Enable bot for FIDA-PERP at 2022-02-22 21:01:56 UTC
+FTX cononnection error at 2022-02-22 21:16:15 UTC
+FTX cononnection error at 2022-02-22 21:16:28 UTC
+Disable bot for FIDA-PERP - 8235445 at 2022-02-22 21:32:10 UTC
+Disable bot for CLV-PERP - 8235415 at 2022-02-22 21:32:12 UTC
+Enable bot for ZEC-PERP at 2022-02-22 21:32:25 UTC
+Disable bot for ZEC-PERP - 8235562 at 2022-02-22 21:46:43 UTC
+Enable bot for AXS-PERP at 2022-02-22 21:46:56 UTC

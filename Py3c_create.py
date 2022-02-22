@@ -1,11 +1,12 @@
-import ccxt
-import time
 import math
-import config
 import os
-from time import gmtime, strftime
-from py3cw.request import Py3CW
+import time
 from pathlib import Path
+
+import ccxt
+from py3cw.request import Py3CW
+
+import config
 
 p3cw = Py3CW(
     key=config.TC_API_KEY,
@@ -67,41 +68,46 @@ def generate_long_bots(pairs, minprice):
     bot_list = {}
     order_too_low = []
     for key in pairs:
+        print("------------")
+        print(key)
         if config.BASE_ORDER_VOLUME > minprice[key]:
-            #print(key)
-            error, data = p3cw.request(
-                entity='bots',
-                action='create_bot',
-                payload={
-                "name": "LongPy_"+key,
-                "account_id": config.TC_ACCOUNT_ID,
-                "pairs": "USD_"+key,
-                "base_order_volume": config.BASE_ORDER_VOLUME,
-                "base_order_volume_type": "quote_currency",
-                "take_profit": config.TAKE_PROFIT,
-                "safety_order_volume": config.SAFETY_ORDER_VOLUME,
-                "safety_order_volume_type": "quote_currency",
-                "martingale_volume_coefficient": config.MARTINGALE_VOLUME_COEFFICIENT,
-                "martingale_step_coefficient": config.MARTINGALE_STEP_COEFFICIENT,
-                "max_safety_orders": config.MAX_SAFETY_ORERS,
-                "active_safety_orders_count": config.ACTIVE_SAFETY_ORDERS_COUNT,
-                "safety_order_step_percentage": config.SAFETY_ORDER_STEP_PERCENTAGE,
-                "take_profit_type": "total",
-                "strategy_list": [{"strategy":"nonstop"}],
-                "leverage_type": "cross",
-                "leverage_custom_value": config.LEVERAGE_CUSTOM_VALUE,
-                "start_order_type": "market",
-                "stop_loss_type": "stop_loss",
-                "strategy": "long"
-                }
-            )
-            print(f'Error: {error}')
-            bot_list[key] = data["id"]
-            print(f'{key}  > {bot_list[key]}')
-            time.sleep(0.3)
-            f = open("lbotid_list.txt", "a")
-            f.write(f'{key}:{bot_list[key]}\n')
-            f.close()
+            try:
+                error, data = p3cw.request(
+                    entity='bots',
+                    action='create_bot',
+                    payload={
+                    "name": "LongPy_"+key,
+                    "account_id": config.TC_ACCOUNT_ID,
+                    "pairs": "USD_"+key,
+                    "base_order_volume": config.BASE_ORDER_VOLUME,
+                    "base_order_volume_type": "quote_currency",
+                    "take_profit": config.TAKE_PROFIT,
+                    "safety_order_volume": config.SAFETY_ORDER_VOLUME,
+                    "safety_order_volume_type": "quote_currency",
+                    "martingale_volume_coefficient": config.MARTINGALE_VOLUME_COEFFICIENT,
+                    "martingale_step_coefficient": config.MARTINGALE_STEP_COEFFICIENT,
+                    "max_safety_orders": config.MAX_SAFETY_ORDERS,
+                    "active_safety_orders_count": config.ACTIVE_SAFETY_ORDERS_COUNT,
+                    "safety_order_step_percentage": config.SAFETY_ORDER_STEP_PERCENTAGE,
+                    "take_profit_type": "total",
+                    "strategy_list": [{"strategy":"nonstop"}],
+                    "leverage_type": "cross",
+                    "leverage_custom_value": config.LEVERAGE_CUSTOM_VALUE,
+                    "start_order_type": "market",
+                    "stop_loss_type": "stop_loss",
+                    "strategy": "long"
+                    }
+                )
+                print(f'Error: {error}')
+                bot_list[key] = data["id"]
+                print(f'{key}  > {bot_list[key]}')
+                time.sleep(0.3)
+                f = open("lbotid_list.txt", "a")
+                f.write(f'{key}:{bot_list[key]}\n')
+                f.close()
+            except:
+                print("ERROR ADDING THIS KEY")
+
         else:
             print(f'Order volume too low for {key}, bot not created')
             order_too_low.append(key)
@@ -116,40 +122,45 @@ def generate_short_bots(pairs, minprice):
     bot_list = {}
     order_too_low = []
     for key in pairs:
+        print("------------")
+        print("key")
         if config.BASE_ORDER_VOLUME > minprice[key]:
-            error, data = p3cw.request(
-                entity='bots',
-                action='create_bot',
-                payload={
-                "name": "ShortPy_"+key,
-                "account_id": config.TC_ACCOUNT_ID,
-                "pairs": "USD_"+key,
-                "base_order_volume": config.BASE_ORDER_VOLUME,
-                "base_order_volume_type": "quote_currency",
-                "take_profit": config.TAKE_PROFIT,
-                "safety_order_volume": config.SAFETY_ORDER_VOLUME,
-                "safety_order_volume_type": "quote_currency",
-                "martingale_volume_coefficient": config.MARTINGALE_VOLUME_COEFFICIENT,
-                "martingale_step_coefficient": config.MARTINGALE_STEP_COEFFICIENT,
-                "max_safety_orders": config.MAX_SAFETY_ORERS,
-                "active_safety_orders_count": config.ACTIVE_SAFETY_ORDERS_COUNT,
-                "safety_order_step_percentage": config.SAFETY_ORDER_STEP_PERCENTAGE,
-                "take_profit_type": "total",
-                "strategy_list": [{"strategy":"nonstop"}],
-                "leverage_type": "cross",
-                "leverage_custom_value": config.LEVERAGE_CUSTOM_VALUE,
-                "start_order_type": "market",
-                "stop_loss_type": "stop_loss",
-                "strategy": "short"
-                }
-            )
-            print(f'Error: {error}')
-            bot_list[key] = data["id"]
-            print(f'{key}  > {bot_list[key]}')
-            time.sleep(0.3)
-            f = open("sbotid_list.txt", "a")
-            f.write(f'{key}:{bot_list[key]}\n')
-            f.close()
+            try:
+                error, data = p3cw.request(
+                    entity='bots',
+                    action='create_bot',
+                    payload={
+                    "name": "ShortPy_"+key,
+                    "account_id": config.TC_ACCOUNT_ID,
+                    "pairs": "USD_"+key,
+                    "base_order_volume": config.BASE_ORDER_VOLUME,
+                    "base_order_volume_type": "quote_currency",
+                    "take_profit": config.TAKE_PROFIT,
+                    "safety_order_volume": config.SAFETY_ORDER_VOLUME,
+                    "safety_order_volume_type": "quote_currency",
+                    "martingale_volume_coefficient": config.MARTINGALE_VOLUME_COEFFICIENT,
+                    "martingale_step_coefficient": config.MARTINGALE_STEP_COEFFICIENT,
+                    "max_safety_orders": config.MAX_SAFETY_ORDERS,
+                    "active_safety_orders_count": config.ACTIVE_SAFETY_ORDERS_COUNT,
+                    "safety_order_step_percentage": config.SAFETY_ORDER_STEP_PERCENTAGE,
+                    "take_profit_type": "total",
+                    "strategy_list": [{"strategy":"nonstop"}],
+                    "leverage_type": "cross",
+                    "leverage_custom_value": config.LEVERAGE_CUSTOM_VALUE,
+                    "start_order_type": "market",
+                    "stop_loss_type": "stop_loss",
+                    "strategy": "short"
+                    }
+                )
+                print(f'Error: {error}')
+                bot_list[key] = data["id"]
+                print(f'{key}  > {bot_list[key]}')
+                time.sleep(0.3)
+                f = open("sbotid_list.txt", "a")
+                f.write(f'{key}:{bot_list[key]}\n')
+                f.close()
+            except:
+                print("ERROR ADDING THIS KEY")
         else:
             print(f'Order volume too low for {key}, bot not created')
             order_too_low.append(key)

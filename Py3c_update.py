@@ -36,7 +36,7 @@ def update_bots(pairs, strategy):
             "safety_order_volume_type": "quote_currency",
             "martingale_volume_coefficient": config.MARTINGALE_VOLUME_COEFFICIENT,
             "martingale_step_coefficient": config.MARTINGALE_STEP_COEFFICIENT,
-            "max_safety_orders": config.MAX_SAFETY_ORERS,
+            "max_safety_orders": config.MAX_SAFETY_ORDERS,
             "active_safety_orders_count": config.ACTIVE_SAFETY_ORDERS_COUNT,
             "safety_order_step_percentage": config.SAFETY_ORDER_STEP_PERCENTAGE,
             "take_profit_type": "total",
