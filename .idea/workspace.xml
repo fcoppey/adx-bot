@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="87eb07ed-c141-4c5f-bf98-72cbebcca9aa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py3c_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py3c_create.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py3c_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py3c_update.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adx_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/adx_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645546384735</updated>
-      <workItem from="1645546387174" duration="9123000" />
+      <workItem from="1645546387174" duration="9724000" />
     </task>
     <servers />
   </component>
