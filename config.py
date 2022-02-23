@@ -14,12 +14,16 @@ ADX_LENGTH = 14
 EMA_LENGTH = 20
 EMA_SMOOTHING = 3
 DEAL_BOT_RATIO_WARNING = 0.75
+HTF_VALIDATE = True
+HTF_MULTIPLIER = 4
+HTF_FAST_EMA = 20
+HTF_SLOW_EMA = 40
 CLOSE_DEALS_WITH_BOT = False  # WARNING: Will close all open positions with no equivalent enabled bots.
 EARLY_CLOSE = True
 CLOSE_DEALS = True  # Allow bot to close deals on opposite signals. Use False to manually rescue red bags.
 
 # 3Commas Bot Settings
-BASE_ORDER_VOLUME = 10 #IN USD
+BASE_ORDER_VOLUME = 10  # IN USD
 TAKE_PROFIT = 0.75
 SAFETY_ORDER_VOLUME = 12.5
 MARTINGALE_VOLUME_COEFFICIENT = 1.2
