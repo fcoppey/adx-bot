@@ -6,7 +6,7 @@ BASE_URL = 'https://api.3commas.io'
 API_KEY = 'FLgpsOsl9xuz_DD1HK194X0xALO236Y0OFY4Twj4'
 SECRET_KEY = 'vVwkLvohN5KHI5UcyKn1knqnwR-zcqkJUeT48h24'
 SUB_ACCOUNT = '3commas'
-PAIRS_BLACKLIST = ['DMG-PERP', 'BRZ-PERP', 'PERP/USD', 'SRN-PERP', 'PRIV-PERP', 'SHIB-PERP']
+PAIRS_BLACKLIST = ['DMG-PERP', 'BRZ-PERP', 'PERP/USD', 'SRN-PERP', 'PRIV-PERP', 'SHIB-PERP', 'BAO-PERP', 'LOOKS-PERP']
 MAX_OPEN_POSITIONS = 10
 FUNDS_USAGE = 0.9
 TF = 15  # Timeframe - always in minutes - Greater than 1 minute, less than 1 day.
@@ -28,6 +28,7 @@ MAX_SAFETY_ORDERS = 10
 ACTIVE_SAFETY_ORDERS_COUNT = 5
 SAFETY_ORDER_STEP_PERCENTAGE = 0.21
 LEVERAGE_CUSTOM_VALUE = 3
+TRAILING_STOP_LOSS = 0.05
 
 # Used When Updating Bot Settings
 STOP_LOSS_TYPE = 'stop_loss_and_disable_bot'  # or stop_loss
