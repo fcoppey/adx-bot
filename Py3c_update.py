@@ -24,38 +24,41 @@ def update_bots(pairs, strategy):
         error, data = p3cw.request(
             entity='bots',
             action='update',
-            action_id = bot_id,
+            action_id=bot_id,
             payload={
-            "name": pre_name+key,
-            #"account_id": config.TC_ACCOUNT_ID,
-            "pairs": "USD_"+key,
-            "base_order_volume": config.BASE_ORDER_VOLUME,
-            "base_order_volume_type": "quote_currency",
-            "take_profit": config.TAKE_PROFIT,
-            "safety_order_volume": config.SAFETY_ORDER_VOLUME,
-            "safety_order_volume_type": "quote_currency",
-            "martingale_volume_coefficient": config.MARTINGALE_VOLUME_COEFFICIENT,
-            "martingale_step_coefficient": config.MARTINGALE_STEP_COEFFICIENT,
-            "max_safety_orders": config.MAX_SAFETY_ORDERS,
-            "active_safety_orders_count": config.ACTIVE_SAFETY_ORDERS_COUNT,
-            "safety_order_step_percentage": config.SAFETY_ORDER_STEP_PERCENTAGE,
-            "take_profit_type": "total",
-            "strategy_list": [{"strategy":"nonstop"}],
-            "leverage_type": "cross",
-            "leverage_custom_value": config.LEVERAGE_CUSTOM_VALUE,
-            "start_order_type": config.START_ORDER_TYPE,
-            "stop_loss_percentage": config.STOP_LOSS_PERCENTAGE,
-            "stop_loss_type": config.STOP_LOSS_TYPE,
-            "stop_loss_timeout_enabled": config.STOP_LOSS_TIMEOUT_ENABLED,
-            "stop_loss_timeout_in_seconds": config.STOP_LOSS_TIMEOUT_IN_SECONDS,
-            #"strategy": "long"
-            "bot_id": bot_id
+                "name": pre_name+key,
+                #"account_id": config.TC_ACCOUNT_ID,
+                "pairs": "USD_"+key,
+                "base_order_volume": config.BASE_ORDER_VOLUME,
+                "base_order_volume_type": "quote_currency",
+                "take_profit": config.TAKE_PROFIT,
+                "trailing_enabled": True if config.TRAILING_DEVIATION > 0 else False,
+                "trailing_deviation": config.TRAILING_DEVIATION,
+                "safety_order_volume": config.SAFETY_ORDER_VOLUME,
+                "safety_order_volume_type": "quote_currency",
+                "martingale_volume_coefficient": config.MARTINGALE_VOLUME_COEFFICIENT,
+                "martingale_step_coefficient": config.MARTINGALE_STEP_COEFFICIENT,
+                "max_safety_orders": config.MAX_SAFETY_ORDERS,
+                "active_safety_orders_count": config.ACTIVE_SAFETY_ORDERS_COUNT,
+                "safety_order_step_percentage": config.SAFETY_ORDER_STEP_PERCENTAGE,
+                "take_profit_type": "total",
+                "strategy_list": [{"strategy": "nonstop"}],
+                "leverage_type": "cross",
+                "leverage_custom_value": config.LEVERAGE_CUSTOM_VALUE,
+                "start_order_type": config.START_ORDER_TYPE,
+                "stop_loss_percentage": config.STOP_LOSS_PERCENTAGE,
+                "stop_loss_type": config.STOP_LOSS_TYPE,
+                "stop_loss_timeout_enabled": config.STOP_LOSS_TIMEOUT_ENABLED,
+                "stop_loss_timeout_in_seconds": config.STOP_LOSS_TIMEOUT_IN_SECONDS,
+                "bot_id": bot_id
+                # "strategy": "long",
             }
         )
         print(f'Error: {error}')
-        #bot_list[key] = data["id"]
+        # bot_list[key] = data["id"]
         print(f'{pre_name+key} > updated')
         time.sleep(0.3)
+
 
 def enable_bots(pairs):
     for key in pairs:
