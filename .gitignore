@@ -3,4 +3,6 @@ old_versions/
 .DS_Store
 Py3ctest.py
 
+.idea/*
+
 
